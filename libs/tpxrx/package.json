@@ -1,5 +1,5 @@
 {
-  "name": "tpxrx",
+  "name": "@tpx/tpxrx",
   "version": "0.0.0",
   "generators": "./generators.json",
   "executors": "./executors.json",
