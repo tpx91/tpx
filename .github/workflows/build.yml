@@ -19,6 +19,5 @@ jobs:
     - run: npm ci
     - run: npm run build-all
     - run: npm run test-all
+    - run: npm config set _auth ${{secrets.npm_token}}
     - run: npm run publish-all
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.npm_token}}

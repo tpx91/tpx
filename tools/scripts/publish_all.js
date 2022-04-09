@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const { exec } = require('child_process');
 const fs = require('fs');
-console.log(fs.readdirSync('libs'))
 let tpxLibs = fs.readdirSync('libs')?.filter((l) => {
   try {
     fs.readFileSync(`libs/${l}/ng-package.json`);
@@ -22,8 +21,6 @@ const runCommand = (command, options) => {
         reject(error);
         return;
       }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
       resolve();
     });
   });
