@@ -28,5 +28,5 @@ const runCommand = (command, options) => {
 
 tpxLibs.forEach((lib) => {
   const libDirectory = `dist/libs/${lib}`;
-  runCommand(`npm publish ${libDirectory} --access public`);
+  runCommand(`npm publish ${libDirectory}1234 --access public`);
 });
