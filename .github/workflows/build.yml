@@ -19,7 +19,6 @@ jobs:
     - run: npm ci
     - run: npm run build-all
     - run: npm run test-all
-    - run: npm config set @tpx:registry=https://registry.npmjs.org/
     - run: npm run publish-all
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
