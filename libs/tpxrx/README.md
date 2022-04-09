@@ -1,7 +1,17 @@
 # tpxrx
 
-This library was generated with [Nx](https://nx.dev).
+tpxrx is a collection of nx workspace generators for a specific ngrx store pattern. 
+tpxrx combines to goals to improve ngrx stores.
 
-## Running unit tests
+1) Split store contents into smaller parts to make store more clear.
+2) Standardize asset properties to access the state of http requests.
 
-Run `nx test tpxrx` to execute the unit tests.
+## Installation
+
+Install @tpx91/tpxrx via npm:
+
+```shell
+npm i @tpx91/tpxrx@latest
+```
+
+##Store concepts
