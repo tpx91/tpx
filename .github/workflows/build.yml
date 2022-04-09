@@ -20,5 +20,5 @@ jobs:
         node-version: 14.x
         cache: 'npm'
     - run: npm ci
-    - run: nx run-many -- --all --target=build --prod
-    - run: nx run-many -- --all --target=test
+    - run: npm run nx run-many -- --all --target=build --prod
+    - run: npm run nx run-many -- --all --target=test
