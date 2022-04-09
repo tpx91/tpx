@@ -29,7 +29,7 @@ const runCommand = (command, options) => {
   });
 };
 
-Object.keys(tpxLibs).forEach((lib) => {
+tpxLibs.forEach((lib) => {
   const libDirectory = `dist/libs/${lib}`;
   runCommand(`npm publish ${libDirectory}`);
 });
