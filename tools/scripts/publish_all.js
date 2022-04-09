@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const { exec } = require('child_process');
 const fs = require('fs');
-let afpLibsRaw = fs.readFileSync('afp_libs.json');
-let afpLibs = JSON.parse(afpLibsRaw);
+let tpxLibsRaw = fs.readFileSync('tpx_libs.json');
+let tpxLibs = JSON.parse(tpxLibsRaw);
 
 const snapshot = process.env.BRANCH_NAME !== 'master' && !process.env.BRANCH_NAME.startsWith('release/');
 const buildNumber = process.env.BUILD_NUMBER || '0';
@@ -26,8 +26,8 @@ const runCommand = (command, options) => {
 };
 
 const libVersion = JSON.parse(fs.readFileSync(`package.json`)).version;
-Object.keys(afpLibs).forEach((key) => {
-  const libDirectory = `dist/${afpLibs[key]}`;
+Object.keys(tpxLibs).forEach((key) => {
+  const libDirectory = `dist/${tpxLibs[key]}`;
   if (snapshot) {
     const snapshotVersion = `${libVersion}-SNAPSHOT.${buildNumber}`;
     runCommand(
