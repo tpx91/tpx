@@ -1,0 +1,5 @@
+on(<%= domainClassName %>Actions.<%= actionPropertyName %>Failure, (state, {error}) => ({
+  ...state,
+  <%= actionPropertyName %>Pending: false,
+  <%= actionPropertyName %>Failure: error,
+})),

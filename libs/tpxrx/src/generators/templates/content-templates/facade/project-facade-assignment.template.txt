@@ -1,0 +1,1 @@
+this.<%= domainPropertyName %>Facade = this.<%= domainPropertyName %>FacadeInternal;

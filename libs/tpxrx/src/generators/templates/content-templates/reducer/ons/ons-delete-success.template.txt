@@ -1,0 +1,6 @@
+on(<%= domainClassName %>Actions.<%= actionPropertyName %>Success, (state, {<%= propertyPropertyName %>Id}) => ({
+  ...state,
+  <%= pluralPropertyPropertyName %>: [...state.<%= pluralPropertyPropertyName %>?.filter(v => v.id !== <%= propertyPropertyName %>Id) || []],
+  <%= actionPropertyName %>Pending: false,
+  <%= actionPropertyName %>Success: true,
+})),

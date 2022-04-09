@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "afprx-domain",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Domain name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt":  "What name would you like to use for the domain?"
+    },
+    "project": {
+      "type": "string",
+      "description": "project name",
+      "x-prompt":  "What is the name of the project? Choose an existing project."
+    },
+    "crud": {
+      "type": "boolean",
+      "description": "if true, generate crud actions: load{Action}s, load{Action}, create{Action}, update{Action}, delete{Action}",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "project"
+  ]
+}

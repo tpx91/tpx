@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "tpx-demo": "apps/tpx-demo",
+    "tpx-demo-e2e": "apps/tpx-demo-e2e",
+    "tpxrx": "libs/tpxrx"
+  }
+}

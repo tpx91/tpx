@@ -1,0 +1,3 @@
+<%= actionPropertyName %>Pending?: boolean;
+<%= actionPropertyName %>Success?: boolean;
+<%= actionPropertyName %>Failure?: Error;

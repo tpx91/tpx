@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "afprx-lib",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Parent folder name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt":  "What name would you like to use for the project name of the library (e.g. choose portfolio for portfolio/domain)?"
+    },
+    "domains": {
+      "type": "string",
+      "description": "Comma separated domains initially generated"
+    },
+    "crud": {
+      "type": "boolean",
+      "description": "if true generate crud actions",
+      "default": false
+    }
+  },
+  "required": ["name"]
+}

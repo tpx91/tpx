@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "afprx-action",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Property name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt":  "What name would you like to use for the property?"
+    },
+    "project": {
+      "type": "string",
+      "description": "project name",
+      "x-prompt":  "What is the name of the project? Choose an existing project."
+    },
+    "domain": {
+      "type": "string",
+      "description": "domain name",
+      "x-prompt":  "What is the +state domain name? Choose an existing domain."
+    },
+    "array": {
+      "type": "boolean",
+      "description": "if true as array",
+      "default": false
+    }
+  },
+  "required": ["name", "project", "domain"]
+}

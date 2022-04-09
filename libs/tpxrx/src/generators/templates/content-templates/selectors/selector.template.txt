@@ -1,0 +1,4 @@
+export const get<%= selectorClassName %> = createSelector(
+  get<%= projectClassName %>State,
+  (state: State) => state.<%= selectorPropertyName %>
+);

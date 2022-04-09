@@ -1,0 +1,3 @@
+<%= actionPropertyName %>Pending: false,
+<%= actionPropertyName %>Success: false,
+<%= actionPropertyName %>Failure: null,

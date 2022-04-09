@@ -1,0 +1,3 @@
+import { get<%= projectClassName %>State } from '../<%= projectFileName %>.selectors';
+import { State } from '../<%= projectFileName %>.reducer';
+import { createSelector } from '@ngrx/store';

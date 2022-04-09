@@ -1,0 +1,21 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+import {StoreModule} from '@ngrx/store';
+import * as from<%= projectClassName %> from './+state/<%= projectFileName %>.reducer';
+import {EffectsModule} from '@ngrx/effects';
+import {<%= projectClassName %>Facade} from './+state/<%= projectFileName %>.facade';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    StoreModule.forFeature(
+      from<%= projectClassName %>.<%= projectConstantName %>_FEATURE_KEY,
+      from<%= projectClassName %>.reducer
+    ),
+    EffectsModule.forFeature([]),
+  ],
+  providers: [<%= projectClassName %>Facade],
+})
+export class <%= projectClassName %>Module {}

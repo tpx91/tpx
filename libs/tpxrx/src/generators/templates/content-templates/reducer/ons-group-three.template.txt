@@ -1,0 +1,6 @@
+/*
+ * <%= actionPropertyName %>
+ */
+<%= ons1 %>
+<%= ons2 %>
+<%= ons3 %>

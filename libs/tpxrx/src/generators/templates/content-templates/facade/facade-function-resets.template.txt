@@ -1,0 +1,3 @@
+<%= actionPropertyName %>() {
+  this.dispatch(<%= domainClassName %>ResetsActions.<%= actionPropertyName %>());
+}

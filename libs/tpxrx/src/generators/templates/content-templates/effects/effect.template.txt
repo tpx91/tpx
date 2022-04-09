@@ -1,0 +1,20 @@
+<%= actionPropertyName %>$ = createEffect(() => {
+  return this.actions$.pipe(
+    ofType(<%= domainClassName %>Actions.<%= actionPropertyName %>),
+    switchMap((act) =>
+      this.<%= domainPropertyName %>Service.<%= actionPropertyName %>().pipe(
+        map(() =>
+          <%= domainClassName %>Actions.<%= actionPropertyName %>Success({
+          }),
+        ),
+        catchError((err) =>
+          of(
+            <%= domainClassName %>Actions.<%= actionPropertyName %>Failure({
+              error: err,
+            })
+          )
+        )
+      )
+    )
+  );
+});

@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+import { Action, Store } from '@ngrx/store';
+import * as from<%= projectClassName %> from '../<%= projectFileName %>.reducer';
+import * as <%= domainClassName %>ResetsActions from './<%= domainFileName %>.actions.resets';
+
+@Injectable()
+export class <%= domainClassName %>ResetsFacade {
+  reset<%= domainClassName %>Assets() {
+    this.dispatch(<%= domainClassName %>ResetsActions.reset<%= domainClassName %>Assets());
+  }
+
+  constructor(
+    protected store: Store<from<%= projectClassName %>.<%= projectClassName %>PartialState>,
+  ) {}
+
+  protected dispatch(action: Action) {
+    this.store.dispatch(action);
+  }
+}

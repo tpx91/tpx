@@ -1,0 +1,1 @@
+private <%= domainPropertyName %>Service: <%= domainClassName %>Service,

@@ -1,0 +1,13 @@
+import {ActionCreator, on, ReducerTypes} from '@ngrx/store';
+import * as <%= domainClassName %>Actions from './<%= domainFileName %>.actions';
+import {get<%= domainClassName %>ResetsOns} from './<%= domainFileName %>.reducer.resets';
+
+export interface <%= domainClassName %>State {}
+
+export const <%= domainPropertyName %>InitialState: <%= domainClassName %>State = {};
+
+export function get<%= domainClassName %>Ons<T extends <%= domainClassName %>State>(): ReducerTypes<T, ActionCreator[]>[] {
+  return [
+    ...get<%= domainClassName %>ResetsOns<T>(),
+  ];
+}

@@ -1,0 +1,3 @@
+export const <%= actionPropertyName %>Success = createAction(
+  '[<%= projectClassName %>] <%= actionPropertyName %>Success',
+);

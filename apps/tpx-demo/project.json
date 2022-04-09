@@ -1,0 +1,91 @@
+{
+  "projectType": "application",
+  "root": "apps/tpx-demo",
+  "sourceRoot": "apps/tpx-demo/src",
+  "prefix": "tpx",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/tpx-demo",
+        "index": "apps/tpx-demo/src/index.html",
+        "main": "apps/tpx-demo/src/main.ts",
+        "polyfills": "apps/tpx-demo/src/polyfills.ts",
+        "tsConfig": "apps/tpx-demo/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/tpx-demo/src/favicon.ico", "apps/tpx-demo/src/assets"],
+        "styles": ["apps/tpx-demo/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/tpx-demo/src/environments/environment.ts",
+              "with": "apps/tpx-demo/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "tpx-demo:build:production"
+        },
+        "development": {
+          "browserTarget": "tpx-demo:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "tpx-demo:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/tpx-demo/src/**/*.ts",
+          "apps/tpx-demo/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/tpx-demo"],
+      "options": {
+        "jestConfig": "apps/tpx-demo/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

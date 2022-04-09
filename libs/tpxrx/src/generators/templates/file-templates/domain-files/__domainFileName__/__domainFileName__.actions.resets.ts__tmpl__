@@ -1,0 +1,8 @@
+import { createAction } from '@ngrx/store';
+
+/*
+ * reset<%= domainClassName %>Assets
+ */
+export const reset<%= domainClassName %>Assets = createAction(
+  '[<%= projectClassName %>] reset<%= domainClassName %>Assets'
+);

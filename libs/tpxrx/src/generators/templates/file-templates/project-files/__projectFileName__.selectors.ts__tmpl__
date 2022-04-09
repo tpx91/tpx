@@ -1,0 +1,9 @@
+import {
+  <%= projectConstantName %>_FEATURE_KEY,
+  State,
+} from './<%= projectFileName %>.reducer';
+import { createFeatureSelector } from '@ngrx/store';
+
+export const get<%= projectClassName %>State = createFeatureSelector<State>(
+  <%= projectConstantName %>_FEATURE_KEY
+);

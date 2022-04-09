@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import * as <%= domainClassName %>Selectors from './<%= domainFileName %>.selectors';
+import * as from<%= projectClassName %> from '../<%= projectFileName %>.reducer';
+import * as <%= domainClassName %>Actions from './<%= domainFileName %>.actions';
+import {<%= domainClassName %>ResetsFacade} from './<%= domainFileName %>.facade.resets';
+
+@Injectable()
+export class <%= domainClassName %>Facade extends <%= domainClassName %>ResetsFacade {
+  constructor(
+    protected store: Store<from<%= projectClassName %>.<%= projectClassName %>PartialState>,
+  ) {
+    super(store);
+  }
+}

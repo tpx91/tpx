@@ -1,0 +1,6 @@
+on(<%= domainClassName %>Actions.<%= actionPropertyName %>, (state) => ({
+  ...state,
+  <%= actionPropertyName %>Pending: true,
+  <%= actionPropertyName %>Success: false,
+  <%= actionPropertyName %>Failure: null,
+})),

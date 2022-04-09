@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "tpxrx",
+  "version": "0.0.1",
+  "generators": {
+    "lib": {
+      "factory": "./src/generators/tpxrx-lib/generator",
+      "schema": "./src/generators/tpxrx-lib/schema.json",
+      "description": "tpxrx-lib generator"
+    },
+    "domain": {
+      "factory": "./src/generators/tpxrx-domain/generator",
+      "schema": "./src/generators/tpxrx-domain/schema.json",
+      "description": "tpxrx-domain generator"
+    },
+    "action": {
+      "factory": "./src/generators/tpxrx-action/generator",
+      "schema": "./src/generators/tpxrx-action/schema.json",
+      "description": "tpxrx-action generator"
+    },
+    "property": {
+      "factory": "./src/generators/tpxrx-property/generator",
+      "schema": "./src/generators/tpxrx-property/schema.json",
+      "description": "tpxrx-property generator"
+    }
+  }
+}

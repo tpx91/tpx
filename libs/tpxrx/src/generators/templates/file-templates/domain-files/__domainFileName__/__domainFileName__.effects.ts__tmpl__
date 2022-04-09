@@ -1,0 +1,13 @@
+import {act, Actions, createEffect, ofType} from '@ngrx/effects';
+import * as <%= domainClassName %>Actions from './<%= domainFileName %>.actions';
+import {catchError, map, switchMap} from 'rxjs/operators';
+import {of} from 'rxjs';
+import {Injectable} from '@angular/core';
+
+@Injectable()
+export class <%= domainClassName %>Effects {
+  constructor(
+    private actions$: Actions,
+  ) {
+  }
+}

@@ -1,0 +1,4 @@
+on(<%= domainClassName %>ResetsActions.<%= actionPropertyName %>, (state) => ({
+  ...state,
+  <%= propertyPropertyName %>: null,
+})),

@@ -1,0 +1,1 @@
+<%= domainPropertyName %>Facade: <%= domainClassName %>Facade;
