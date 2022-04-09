@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 const { exec } = require('child_process');
 const fs = require('fs');
-let tpxLibsRaw = fs.readFileSync('tpx_libs.json');
-let tpxLibs = JSON.parse(tpxLibsRaw);
-
-const snapshot = process.env.BRANCH_NAME !== 'master' && !process.env.BRANCH_NAME.startsWith('release/');
-const buildNumber = process.env.BUILD_NUMBER || '0';
+console.log(fs.readdirSync('libs'))
+let tpxLibs = fs.readdirSync('libs')?.filter((l) => {
+  try {
+    fs.readFileSync(`libs/${l}/ng-package.json`);
+  } catch(e) {
+    return false;
+  }
+  return true;
+});
 
 const runCommand = (command, options) => {
   return new Promise((resolve, reject) => {
@@ -25,18 +29,7 @@ const runCommand = (command, options) => {
   });
 };
 
-const libVersion = JSON.parse(fs.readFileSync(`package.json`)).version;
-Object.keys(tpxLibs).forEach((key) => {
-  const libDirectory = `dist/${tpxLibs[key]}`;
-  if (snapshot) {
-    const snapshotVersion = `${libVersion}-SNAPSHOT.${buildNumber}`;
-    runCommand(
-      `npm --ignore-scripts version --no-git-tag-version ${snapshotVersion}`,
-      { cwd: libDirectory }
-    ).then(() => {
-      runCommand(`npm publish ${libDirectory} --tag snapshot`);
-    });
-  } else {
-    runCommand(`npm publish ${libDirectory}`);
-  }
+Object.keys(tpxLibs).forEach((lib) => {
+  const libDirectory = `dist/libs/${lib}`;
+  runCommand(`npm publish ${libDirectory}`);
 });
