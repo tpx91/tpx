@@ -14,7 +14,16 @@
     "test-all": "nx run-many --all --parallel --target=test",
     "publish-all": "ts-node tools/scripts/publish_all.js"
   },
-  "private": true,
+  "keywords": [
+    "angular",
+    "typescript",
+    "ngrx"
+  ],
+  "author": "Tim Pfeiffer <timpfeiffer.accounts@web.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpx91/tpx.git"
+  },
   "dependencies": {
     "@angular/animations": "~13.3.0",
     "@angular/common": "~13.3.0",

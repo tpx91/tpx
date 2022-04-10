@@ -6,10 +6,10 @@ tpxrx combines two goals to improve ngrx stores.
 2) Standardize asset properties to access the state of http requests.
 
 ## Installation
-Install @tpx91/tpxrx via npm:
+Install @tpx1/tpxrx via npm:
 
 ```shell
-npm i @tpx91/tpxrx@latest
+npm i @tpx1/tpxrx@latest
 ```
 
 ##Store concepts
