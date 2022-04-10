@@ -96,7 +96,7 @@ export function toArray(name: string): string {
   return `${name}[]`;
 }
 
-export function toFormattedNames(names: Names, format: 'project' | 'domain'): any {
+export function toFormattedNames(names: Names, format: 'project' | 'domain'): {[key: string]: string} {
   return Object.keys(names).reduce((r, k) => ({
     ...r,
     [`${format}${firstLetterUppercase(k)}`]: names[k],

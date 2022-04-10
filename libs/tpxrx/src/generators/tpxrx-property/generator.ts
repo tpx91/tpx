@@ -2,13 +2,13 @@ import {Tree} from '@nrwl/devkit';
 import {GeneratorOptions} from './schema';
 import {Action, ActionType, Names} from '../common/names';
 import {insertActionsContent} from '../common/file-functions/action.functions';
-import {getRegexMatch, toArray, toSingular} from '../common/util.functions';
+import {getRegexMatch, toSingular} from '../common/util.functions';
 import {REDUCER_STATE_CONTENT_REGEX} from '../common/regexp';
 import {tpxrxActionNamesArray, tpxrxNames, tpxrxPluralNames} from '../common/names.functions';
 import {insertFacadeContent} from '../common/file-functions/facade.functions';
 import {insertReducerContent} from '../common/file-functions/reducer.functions';
 import {insertSelectorsContent} from '../common/file-functions/selectors.functions';
-import {getModuleFilePath, getStateDomainFilePath, getStateDomainPath, setLibDirName} from '../common/path.functions';
+import {getModuleFilePath, getStateDomainFilePath, getStateDomainPath} from '../common/path.functions';
 import {generatorWrapper} from '../common/generator';
 
 export default async function (tree: Tree, schema: GeneratorOptions) {

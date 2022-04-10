@@ -1,8 +1,7 @@
-import {joinPathFragments, Tree, visitNotIgnoredFiles} from '@nrwl/devkit';
+import {Tree, visitNotIgnoredFiles} from '@nrwl/devkit';
 import {findEndIndex, findStartIndex, getRegexMatch} from './util.functions';
 import {Names} from './names';
 import {getStatePath} from './path.functions';
-import {CONSTRUCTOR_REGEX} from './regexp';
 
 export function insertItems(tree: Tree, path: string, insertItems: string[], matchRegex: RegExp, open: string, close: string, splitter: string, ignoreDuplicates?: boolean) {
   let content = tree.read(path).toString();
@@ -67,7 +66,7 @@ export function removeDuplicates(insertItems: string[], content: string, splitte
   });
 }
 
-export function decode<T>(tree: Tree, projectNs: Names) {
+export function decode(tree: Tree, projectNs: Names) {
   visitNotIgnoredFiles(
     tree,
     getStatePath(projectNs),
