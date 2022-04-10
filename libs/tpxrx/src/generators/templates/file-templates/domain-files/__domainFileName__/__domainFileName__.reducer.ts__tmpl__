@@ -4,7 +4,10 @@ import {get<%= domainClassName %>ResetsOns} from './<%= domainFileName %>.reduce
 
 export interface <%= domainClassName %>State {}
 
-export const <%= domainPropertyName %>InitialState: <%= domainClassName %>State = {};
+export const <%= domainPropertyName %>InitialState: <%= domainClassName %>State = {
+   // Use carefully! <%= domainPropertyName %>InitialState should be empty.
+   // Arrays should be initiated with undefined or null to differ between unloaded array and loaded empty array.
+};
 
 export function get<%= domainClassName %>Ons<T extends <%= domainClassName %>State>(): ReducerTypes<T, ActionCreator[]>[] {
   return [
