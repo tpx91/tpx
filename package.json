@@ -17,7 +17,8 @@
   "keywords": [
     "angular",
     "typescript",
-    "ngrx"
+    "ngrx",
+    "nx"
   ],
   "author": "Tim Pfeiffer <timpfeiffer.accounts@web.de>",
   "repository": {

@@ -64,7 +64,7 @@ The store contains the following file structure:
 ```
 Run
 ```shell
-nx g @tpx91/tpxrx:lib example --domains=company,user --crud
+nx g @tpx1/tpxrx:lib example --domains=company,user --crud
 ```
 inside your nx workspace to generate this file structure and have a look at each file content.
 
@@ -186,26 +186,26 @@ If this flag is set actions are generated as crud actions: load all, load by id,
 
 #### lib
 ```shell
-nx g @tpx91/tpxrx:lib example/domain
-nx g @tpx91/tpxrx:lib example/domain --domains=domain1,domain2
-nx g @tpx91/tpxrx:lib example/domain --domains=domain1,domain2 --crud
+nx g @tpx1/tpxrx:lib example/domain
+nx g @tpx1/tpxrx:lib example/domain --domains=domain1,domain2
+nx g @tpx1/tpxrx:lib example/domain --domains=domain1,domain2 --crud
 ```
 
 #### domain
 ```shell
-nx g @tpx91/tpxrx:domain domain1 --project=example/domain
-nx g @tpx91/tpxrx:domain domain1 --project=example/domain --crud
+nx g @tpx1/tpxrx:domain domain1 --project=example/domain
+nx g @tpx1/tpxrx:domain domain1 --project=example/domain --crud
 ```
 
 #### action
 ```shell
-nx g @tpx91/tpxrx:action loadPropertyById --project=example/domain --domain=domain1
-nx g @tpx91/tpxrx:action property --project=example/domain --domain=domain1 --crud
+nx g @tpx1/tpxrx:action loadPropertyById --project=example/domain --domain=domain1
+nx g @tpx1/tpxrx:action property --project=example/domain --domain=domain1 --crud
 ```
 
 #### property
 ```shell
-nx g @tpx91/tpxrx:property propertyA --project=example/domain --domain=domain1
-nx g @tpx91/tpxrx:property propertyA --project=example/domain --domain=domain1 --array
+nx g @tpx1/tpxrx:property propertyA --project=example/domain --domain=domain1
+nx g @tpx1/tpxrx:property propertyA --project=example/domain --domain=domain1 --array
 ```
 

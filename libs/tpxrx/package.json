@@ -4,6 +4,12 @@
   "generators": "./generators.json",
   "executors": "./executors.json",
   "license": "MIT",
+  "keywords": [
+    "angular",
+    "typescript",
+    "ngrx",
+    "nx"
+  ],
   "author": "Tim Pfeiffer <timpfeiffer.accounts@web.de>",
   "repository": {
     "type": "git",
