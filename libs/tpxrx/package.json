@@ -1,6 +1,7 @@
 {
   "name": "@tpx1/tpxrx",
   "version": "0.0.1",
+  "main": "src/index.ts",
   "generators": "./generators.json",
   "executors": "./executors.json",
   "license": "MIT",
