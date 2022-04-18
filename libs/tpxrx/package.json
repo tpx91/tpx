@@ -1,6 +1,6 @@
 {
   "name": "@tpx1/tpxrx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/index.ts",
   "generators": "./generators.json",
   "executors": "./executors.json",

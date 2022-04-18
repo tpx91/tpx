@@ -3,6 +3,7 @@
   "projects": {
     "tpx-demo": "apps/tpx-demo",
     "tpx-demo-e2e": "apps/tpx-demo-e2e",
-    "tpxrx": "libs/tpxrx"
+    "tpxrx": "libs/tpxrx",
+    "util": "libs/util"
   }
 }

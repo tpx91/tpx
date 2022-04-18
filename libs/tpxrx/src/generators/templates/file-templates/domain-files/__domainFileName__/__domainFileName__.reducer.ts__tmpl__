@@ -1,6 +1,7 @@
 import {ActionCreator, on, ReducerTypes} from '@ngrx/store';
 import * as <%= domainClassName %>Actions from './<%= domainFileName %>.actions';
 import {get<%= domainClassName %>ResetsOns} from './<%= domainFileName %>.reducer.resets';
+import {replaceArrayItem} from '@tpx/util';
 
 export interface <%= domainClassName %>State {}
 
