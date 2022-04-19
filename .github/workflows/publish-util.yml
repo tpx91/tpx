@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy @tpx1/tpxrx
 
 on:
   push:
@@ -26,6 +26,6 @@ jobs:
       - name: Build
         run: npm run build-all
       - name: Publish
-        run: npm run publish-all
+        run: npm run publish-util
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
