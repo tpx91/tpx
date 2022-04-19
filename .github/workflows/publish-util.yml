@@ -1,4 +1,4 @@
-name: Deploy @tpx1/tpxrx
+name: Deploy @tpx1/util
 
 on:
   push:
