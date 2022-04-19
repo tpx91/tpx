@@ -39,7 +39,7 @@ export function insertReducerContent(tree: Tree, projectNs: Names, domainNs: Nam
   }
 
   const actionDeclarations = actionsNs
-    .filter(a => a.actionType !== ActionType.RESET)
+    .filter(a => !isActionTypeReset(a))
     .reduce((result, actionNs) => {
       return [
         ...result,
