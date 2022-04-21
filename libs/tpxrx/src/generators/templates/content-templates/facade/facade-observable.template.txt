@@ -1,1 +1,0 @@
-<%= actionPropertyName %>$ = this.store.pipe(select(<%= domainClassName %>Selectors.get<%= actionClassName %>));

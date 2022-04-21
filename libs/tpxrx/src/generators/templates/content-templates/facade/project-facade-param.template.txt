@@ -1,1 +1,0 @@
-private <%= domainPropertyName %>FacadeInternal: <%= domainClassName %>Facade,

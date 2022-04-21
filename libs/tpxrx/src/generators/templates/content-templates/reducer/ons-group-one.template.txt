@@ -1,4 +1,0 @@
-/*
- * <%= actionPropertyName %>
- */
-<%= ons1 %>

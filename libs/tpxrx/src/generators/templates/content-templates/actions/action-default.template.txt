@@ -1,4 +1,0 @@
-export const <%= actionPropertyName %> = createAction(
-  '[<%= projectClassName %>] <%= actionPropertyName %>',
-  props<{ <%= properties %> }>()
-);

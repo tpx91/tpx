@@ -17,7 +17,6 @@
     "strict": false,
     "preserveSymlinks": true,
     "paths": {
-      "@tpx/tpxrx": ["libs/tpxrx/src/index.ts"],
       "@tpx/util": ["libs/util/src/index.ts"]
     }
   },

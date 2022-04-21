@@ -1,3 +1,0 @@
-<%= actionPropertyName %>(<%= propertiesAsParams %>) {
-  this.dispatch(<%= domainClassName %>Actions.<%= actionPropertyName %>({ <%= propertiesAsList %> }));
-}
